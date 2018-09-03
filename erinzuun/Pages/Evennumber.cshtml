@@ -1,0 +1,24 @@
+﻿@page
+@model erinzuun.Pages.EvennumberModel
+@{
+    ViewData["Name"] = "Evennumber";
+}
+
+<h2>Evennumber</h2>
+@for(int i=1; i <=10; i++)
+{
+    <b>@i</b>
+    if(i %2 == 0)
+    {
+        @: - Even
+    }
+    else
+    {
+        @: - Odd
+
+    }
+    <br />
+
+}
+
+

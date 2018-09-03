@@ -1,0 +1,59 @@
+﻿@page
+@model erinzuun.Pages.Portfolio.CreateModel
+
+@{
+    ViewData["Name"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Asset</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Asset.Name" class="control-label"></label>
+                <input asp-for="Asset.Name" class="form-control" />
+                <span asp-validation-for="Asset.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.ReleaseDate" class="control-label"></label>
+                <input asp-for="Asset.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Asset.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.DevelopmentDate" class="control-label"></label>
+                <input asp-for="Asset.DevelopmentDate" class="form-control" />
+                <span asp-validation-for="Asset.DevelopmentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Class" class="control-label"></label>
+                <input asp-for="Asset.Class" class="form-control" />
+                <span asp-validation-for="Asset.Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Rating" class="control-label"></label>
+                <input asp-for="Asset.Rating" class="form-control" />
+                <span asp-validation-for="Asset.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Price" class="control-label"></label>
+                <input asp-for="Asset.Price" class="form-control" />
+                <span asp-validation-for="Asset.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
