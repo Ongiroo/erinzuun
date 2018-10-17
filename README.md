@@ -2,9 +2,9 @@
 Erin zuun project
 
 First, start the Angular CLI server: 
+> cd ClientApp
 
-cd ClientApp
-npm start
+> npm start
 
 Then, start the ASP.NET Core app:
 open another terminal
